@@ -22,9 +22,9 @@ def add_member(name, age):
         except Exception as e:
             print(f"An Error has occurred: {e}") #handles errors in Python
         
-        finally: #Must ALWAYS close the cursor and connection, to prevent overusage of resources
-            cursor.close() 
-            conn.close()
+        finally:
+            cursor.close() #closes cursor connection
+            conn.close() #closes cursor connection
 
 #Task 2
 def add_workout_session(member_id, date, duration_minutes, calories_burned):
@@ -47,8 +47,8 @@ def add_workout_session(member_id, date, duration_minutes, calories_burned):
             print(f"An Error has occurred: {e}") #handles Python errors
         
         finally:
-            cursor.close()
-            conn.close()
+            cursor.close() #closes cursor connection
+            conn.close()#closes cursor connection
 
 #Task 3
 def update_member_age(member_id, new_age):
@@ -71,8 +71,8 @@ def update_member_age(member_id, new_age):
         except Exception as e:
             print(f"An Error has occurred: {e}")#Handles Python Errors
         finally:
-            cursor.close()
-            conn.close()
+            cursor.close()#closes cursor connection
+            conn.close()#closes cursor connection
 
 #Task 4
 def delete_workout_session(session_id):
@@ -95,10 +95,10 @@ def delete_workout_session(session_id):
         except Exception as e:
             print(f"An Error has occurred: {e}")#Handles Python Errors
         finally:
-            cursor.close()
-            conn.close()
+            cursor.close()#closes cursor connection
+            conn.close()#closes cursor connection
 
 # add_member("Jane Doe", 22)
 # add_workout_session(1, "2024-9-19", 30, 350)
-# update_member_age(1, 36)
+# update_member_age(1, 29)
 # delete_workout_session((1, ))
