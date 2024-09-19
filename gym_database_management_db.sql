@@ -6,7 +6,7 @@ name VARCHAR(250) NOT NULL,
 age INT NOT NULL);
 
 CREATE TABLE WorkoutSessions (
-    session_id INT PRIMARY KEY auto_increment,
+    session_id INT PRIMARY KEY AUTO_INCREMENT,
     member_id INT,
     date DATE NOT NULL,
     duration_minutes INT NOT NULL,
