@@ -12,8 +12,9 @@ def get_members_in_age_range(start_age, end_age):
                 if start_age < end_age: 
                     #Used the If Then statement to account for times when the start_age value entered is greater than the end_age value
                     
-                    query = "SELECT * FROM Members WHERE age > %s AND age < %s"
-                    #displays all information for members whose ages fall within the given range
+                    query = "SELECT * FROM Members WHERE age >= %s AND age <= %s" 
+                    # Pulls the data for members whose ages fall between the start_age and end_age values in the Members table
+                    
                     age_range = (start_age, end_age)
                     #sets the age range to a variable
                     cursor.execute(query, age_range)
